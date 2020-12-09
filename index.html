@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Time Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+</head>
+<body>
+<div class="form" id="timeForm">
+    <img src="assets/images/abstract-1152.png" alt="eye" class="eye">
+    <h1>Оценка по трем точкам
+<!--        <span class="popup" id="popup" >(?)</span>
+        <span class="popupText" id="popupText" hidden>Оценка по трем точкам – метод, отражающий три оценки рентабельности или
+            срока выполнения задачи. Они показывают оптимистический, самый вероятный и пессимистический итог.</span>-->
+    </h1>
+    <div class="form__area">
+        <label for="optimisticNumber">Оптимистичная оценка: </label>
+        <input type="number" min="1" name="optimisticNumber" id="optimisticNumber" class="input__area"
+               placeholder="Цифра" required>
+    </div>
+    <div class="form__area">
+        <label for="possibleNumber">Наиболее вероятная: </label>
+        <input type="number" min="1" name="pessimisticNumber" id="possibleNumber" class="input__area"
+               placeholder="Цифра" required>
+    </div>
+    <div class="form__area">
+        <label for="pessimisticNumber">Пессимистичная оценка: </label>
+        <input type="number" min="1" name="pessimisticNumber" id="pessimisticNumber" class="input__area"
+               placeholder="Цифра" required>
+    </div>
+    <div class="form__area">
+        <button type="button" class="form__button" id="formBtn">Done</button>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>

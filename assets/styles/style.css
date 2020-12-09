@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    letter-spacing: .13rem;
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #68707d;
+    height: 100%;
+    /*background: linear-gradient(-45deg, #ecf3fd, #a2afd2);*/
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    /*background-image: url("./abstract-657.png"), linear-gradient(-45deg, #ecf3fd, #a2afd2);*/
+    /*background-blend-mode: overlay;*/
+
+    background-image: url("../images/wavesOpacity.svg"), linear-gradient(-45deg, #ecf3fd, #a2afd2);
+    background-blend-mode: overlay;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    40% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.eye {
+    width: 100px;
+}
+
+h1 {
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.form {
+    padding: 8rem 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, .14);
+    border-radius: .9rem;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+    animation: scale-in-hor-center 0.5s both;
+}
+
+@keyframes scale-in-hor-center {
+    0% {
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.form__area {
+    padding: 1rem;
+}
+
+.form__button {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: .6rem 5rem;
+    margin-top: 2rem;
+
+    border: none;
+    letter-spacing: .2rem;
+    color: #68707d;
+    font-weight: 500;
+    background: #ecf4fd;
+    border-radius: .5rem;
+    box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, .1);
+    outline: none;
+    transition-duration: 0.25s;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    padding: .6rem 8rem;
+    background: #ffffff;
+}
+
+.input__area {
+    display: block;
+    appearance: none;
+    outline: 0;
+    position: relative;
+    border-radius: .5rem;
+    padding: .6rem 5rem;
+    margin: .4rem .2rem .2rem;
+    box-shadow: inset 1px 1px 5px 6px rgba(97, 115, 129, 0.1);
+
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #68707d;
+
+    transition-duration: 0.25s;
+
+    border: double 3px transparent;
+    background-image: linear-gradient(rgba(236, 244, 253, .1), rgba(236, 244, 253, .1)),
+    linear-gradient(to right, rgba(130, 135, 143, 0.1), #c5dcf6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    filter: blur(0.5px);
+}
+
+.input__area:hover {
+    padding: .6rem 8rem;
+    filter: none;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .form {
+        padding: 8rem 14rem;
+    }
+
+    .input__area {
+        padding: .6rem 5rem;
+    }
+
+    .input__area:hover {
+        padding: .6rem 6rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .eye {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .form {
+        padding: .7rem 9.8rem;
+    }
+
+    .input__area {
+        padding: .6rem 3rem;
+    }
+
+    .input__area:hover {
+        padding: .6rem 4rem;
+    }
+}
+
