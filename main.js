@@ -27,6 +27,6 @@ formBtn.addEventListener('click', function(event) {
   answer.classList.add('input__area');
   answerArea.append(answer);
   formulaAns > 1 ?
-      answer.innerHTML = `${formulaAns} days` :
-      answer.innerHTML = `${formulaAns} day`;
+      answer.innerHTML = `${formulaAns} hours` :
+      answer.innerHTML = `${formulaAns} hour`;
 });
